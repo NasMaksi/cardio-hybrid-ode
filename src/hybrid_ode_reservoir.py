@@ -3,9 +3,6 @@ from torchdiffeq import odeint
 import numpy as np
 import matplotlib.pyplot as plt
 
-# -----------------------------
-# Neural Network class inspired by RC/NG-RC
-# -----------------------------
 class ReservoirNet(torch.nn.Module):
     """
     - Input: 5 state volumes
@@ -95,10 +92,8 @@ class HybridODEFunc(torch.nn.Module):
         du[9] = Qpul - Qmt
 
         return du
-
-# -----------------------------
+        
 # Main program with user input
-# -----------------------------
 def main():
     # Parameters
     p_np = np.array([
